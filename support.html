@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bado - Customer Support & Help Center</title>
+    <style>
+        :root {
+            --primary: #166dfb;
+            --secondary: #00d6f6;
+            --dark-navy: #001138;
+            --deep-navy: #012e77;
+            --light-blue: #d9e7fe;
+            --bg-light: #f7f9fc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.65;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .logo-img {
+            width: 88px;
+            height: 88px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .subtitle { font-size: 1.1rem; opacity: 0.9; }
+        .nav-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255, 255, 255, 0.32);
+        }
+        main {
+            max-width: 840px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0, 17, 56, 0.05);
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: 1.35rem;
+            color: var(--deep-navy);
+            margin-top: 30px;
+            margin-bottom: 14px;
+        }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 14px; color: #334155; }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .faq-a {
+            color: #334155;
+            font-size: 0.96rem;
+        }
+        .contact-cta {
+            background: linear-gradient(135deg, #001138 0%, #012e77 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 17, 56, 0.15);
+            margin-top: 32px;
+        }
+        .contact-cta h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .contact-cta p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+        .btn-email {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(22, 109, 251, 0.4);
+            transition: transform 0.15s ease;
+        }
+        .btn-email:hover {
+            transform: translateY(-2px);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px 50px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Bado Logo" class="logo-img">
+            <h1>Bado</h1>
+            <p class="subtitle">Help Center & Customer Support</p>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & EULA</a>
+                <a href="support.html" class="active">Support</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-q">🚗 How does Bado track vehicle deadlines?</div>
+                <div class="faq-a">Bado tracks road tax (Bollo), mandatory safety inspections (Revisione), insurance policies (Assicurazione), and custom service milestones. You can enter dates manually or upload a PDF or image of your certificate to extract deadlines automatically using on-device optical character recognition (OCR).</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">🔄 How do I restore my Bado PRO subscription?</div>
+                <div class="faq-a">If you reinstalled the app or switched to a new iPhone, open Bado, go to the Garage or PRO upgrade screen, and tap <strong>"Ripristina Acquisti" (Restore Purchases)</strong>. As long as you are signed in with the same Apple ID, your subscription will be restored instantly at no additional charge.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">🔒 Is my vehicle paperwork and personal data safe?</div>
+                <div class="faq-a">Yes! Bado is built on a <strong>local-first</strong> architecture. All vehicle details, photos, and scanned documents remain strictly on your iPhone. When iCloud is enabled, your data synchronizes through your personal, end-to-end encrypted Apple iCloud container. We do not operate external web servers to collect or sell your vehicle documents.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">🔔 Why am I not receiving expiry notifications?</div>
+                <div class="faq-a">Ensure notifications are enabled for Bado in your device settings: open <em>Settings &gt; Notifications &gt; Bado</em> and ensure <strong>"Allow Notifications"</strong>, Sounds, and Badges are turned on.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">💳 How do I cancel or modify my subscription?</div>
+                <div class="faq-a">Subscriptions are handled directly by Apple. To cancel or change plans, open your iPhone's <strong>Settings</strong>, tap your <strong>Apple ID profile</strong> at the top, select <strong>Subscriptions</strong>, find <strong>Bado</strong>, and choose "Cancel Subscription". You will retain access until the end of your prepaid billing period.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q">🤖 How does Bado Copilot (AI Assistant) work?</div>
+                <div class="faq-a">Bado Copilot answers questions regarding vehicle maintenance schedules, dashboard warning lights, tire rotations, and scheduled deadlines. It is an automated assistant designed for informational convenience. Always consult a certified mechanic for safety-critical repairs.</div>
+            </div>
+        </div>
+
+        <div class="contact-cta">
+            <h3>Need direct assistance?</h3>
+            <p>Have an issue, bug report, feedback, or feature request? We respond quickly to assist you.</p>
+            <a href="mailto:vitale.mirko1704@gmail.com?subject=Bado%20App%20Support" class="btn-email">Contact Support (Email)</a>
+            <p style="font-size: 0.85rem; margin-top: 14px; opacity: 0.75;">Direct email: vitale.mirko1704@gmail.com</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mirko Vitale. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> &bull; <a href="terms.html">Terms of Service</a> &bull; <a href="support.html">Support</a></p>
+    </footer>
+</body>
+</html>

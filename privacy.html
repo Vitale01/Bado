@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bado - Privacy Policy</title>
+    <style>
+        :root {
+            --primary: #166dfb;
+            --secondary: #00d6f6;
+            --dark-navy: #001138;
+            --deep-navy: #012e77;
+            --light-blue: #d9e7fe;
+            --bg-light: #f7f9fc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.65;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .logo-img {
+            width: 88px;
+            height: 88px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            margin-bottom: 16px;
+        }
+        h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .subtitle { font-size: 1.1rem; opacity: 0.9; }
+        .nav-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        main {
+            max-width: 840px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 20px rgba(0, 17, 56, 0.05);
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+        .update-badge {
+            display: inline-block;
+            background: var(--light-blue);
+            color: var(--deep-navy);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: var(--deep-navy);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 14px; color: #334155; }
+        ul { margin-left: 24px; margin-bottom: 16px; color: #334155; }
+        li { margin-bottom: 8px; }
+        .highlight-box {
+            background: rgba(22, 109, 251, 0.06);
+            border-left: 4px solid var(--primary);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight-box p { margin: 0; font-weight: 500; color: var(--deep-navy); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="logo.png" alt="Bado Logo" class="logo-img">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Bado - Garage & Vehicle Assistant</p>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html" style="background: rgba(255,255,255,0.35);">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="support.html">Support</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="card">
+        <span class="update-badge">Last Updated: October 2026</span>
+
+        <div class="highlight-box">
+            <p><strong>Summary:</strong> Bado is built on a <em>Local-First</em> architecture. Your vehicle data, expenses, and documents stay on your device or in your personal Apple iCloud account. We do not operate tracking servers or sell your personal data.</p>
+        </div>
+
+        <h2>1. Introduction</h2>
+        <p>This Privacy Policy explains how <strong>Bado</strong> ("we", "our", or "the App"), developed by <strong>Mirko Vitale</strong>, handles your information when you use our iOS application.</p>
+        <p>We respect your privacy and are committed to protecting it through transparent and minimal data handling practices.</p>
+
+        <h2>2. Data Collection and Processing</h2>
+        <p>Bado is engineered to operate without requiring user registration or account creation on third-party backend servers. All application data is stored directly on your iPhone or iPad.</p>
+
+        <h3>A. Vehicle Information</h3>
+        <p>You can store information about your vehicles, including:</p>
+        <ul>
+            <li>Vehicle specifications (make, model, year, license plate, mileage, engine details, fuel tank capacity).</li>
+            <li>Maintenance records, service invoices, parts replaced, and costs.</li>
+            <li>Refueling logs and fuel consumption statistics.</li>
+            <li>Custom reminders, notes, and maintenance checklists.</li>
+        </ul>
+        <p>This information is strictly saved in your local device storage (UserDefaults and private application sandbox).</p>
+
+        <h3>B. Document and Photo Scanning (On-Device OCR)</h3>
+        <p>When you attach or scan vehicle documents (such as insurance certificates, vehicle registration, road tax receipts, or inspection reports):</p>
+        <ul>
+            <li>All Optical Character Recognition (OCR) is performed <strong>100% on-device</strong> using Apple's Vision framework (<code>VNRecognizeTextRequest</code>).</li>
+            <li>Your camera feed, photos, and PDF files are <strong>never uploaded to external AI servers or third-party cloud services</strong> for analysis.</li>
+            <li>Saved document files are kept within your device's sandboxed document directory.</li>
+        </ul>
+
+        <h3>C. Location Data</h3>
+        <p>If you grant location permission:</p>
+        <ul>
+            <li><strong>Parking Location:</strong> The App records your vehicle's parking coordinates solely to assist you in remembering where you parked.</li>
+            <li><strong>Nearby Services & EV Charging:</strong> The App uses your current location via Apple MapKit to search for nearby mechanic shops, body shops, tire specialists, and EV charging stations.</li>
+            <li>Location data is processed ephemerally on-device and is never transmitted to our servers or tracked in the background.</li>
+        </ul>
+
+        <h2>3. Cloud Sync and Backups (Apple iCloud)</h2>
+        <p>If you have iCloud enabled on your iOS device, Bado can synchronize and back up your garage data using Apple's native iCloud Drive / CloudKit infrastructure:</p>
+        <ul>
+            <li>All backups are stored directly in your private Apple iCloud container.</li>
+            <li>We have no access to your iCloud credentials, files, or backed-up garage data.</li>
+            <li>You can disable iCloud backup at any time from the in-app Settings menu or through your iOS device Settings.</li>
+        </ul>
+
+        <h2>4. Third-Party Services and Advertising</h2>
+
+        <h3>A. Google AdMob</h3>
+        <p>For users on the free tier, the App may display advertisements served by Google AdMob (banner, interstitial, and rewarded video ads):</p>
+        <ul>
+            <li>In compliance with Apple's App Tracking Transparency (ATT) framework, the App requests your explicit permission before accessing the advertising identifier (IDFA) for personalized ads.</li>
+            <li>If you decline tracking, non-personalized contextual ads will be displayed instead.</li>
+            <li>Subscribers of <strong>Bado PRO</strong> enjoy a completely ad-free experience, and all ad requests are disabled.</li>
+            <li>You can review Google's privacy policy at: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+        </ul>
+
+        <h3>B. In-App Purchases (Apple StoreKit 2)</h3>
+        <p>Subscription and in-app purchase transactions are processed securely through Apple's App Store via StoreKit 2. We never collect or have access to your payment card details, billing address, or Apple ID credentials.</p>
+
+        <h2>5. Data Retention and Deletion</h2>
+        <p>Because your data resides on your device:</p>
+        <ul>
+            <li>You have full control over your records. You can modify or delete individual vehicles, maintenance logs, and documents at any time.</li>
+            <li>Deleting the App from your device permanently erases all locally cached files and records.</li>
+            <li>To delete cloud backups, you can manage your iCloud storage from the iOS Settings app (Apple ID &gt; iCloud &gt; Storage).</li>
+        </ul>
+
+        <h2>6. Children's Privacy</h2>
+        <p>The App does not knowingly collect or solicit any personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
+
+        <h2>7. Contact Information</h2>
+        <p>If you have any questions, suggestions, or privacy concerns regarding Bado, please contact the developer directly:</p>
+        <p>
+            <strong>Developer:</strong> Mirko Vitale<br>
+            <strong>Email:</strong> <a href="mailto:vitale.mirko1704@gmail.com">vitale.mirko1704@gmail.com</a><br>
+            <strong>Repository:</strong> <a href="https://github.com/Vitale01/Bado" target="_blank" rel="noopener">github.com/Vitale01/Bado</a><br>
+            <strong>Website:</strong> <a href="https://vitale01.github.io/Bado/">https://vitale01.github.io/Bado/</a>
+        </p>
+
+        <h2>8. Changes to this Policy</h2>
+        <p>We may update our Privacy Policy periodically. Any modifications will be posted directly on this page with an updated revision date.</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Mirko Vitale. All rights reserved.</p>
+    <p style="margin-top: 6px;"><a href="terms.html">Terms of Service</a> &bull; <a href="support.html">Support</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bado - Your Smart Vehicle & Garage Companion</title>
+    <style>
+        :root {
+            --primary: #166dfb;
+            --secondary: #00d6f6;
+            --dark-navy: #001138;
+            --deep-navy: #012e77;
+            --light-blue: #d9e7fe;
+            --bg-light: #f7f9fc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--deep-navy) 50%, var(--primary) 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 214, 246, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .logo-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 26px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            margin-bottom: 24px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(0, 214, 246, 0.2);
+            color: #00d6f6;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 214, 246, 0.4);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+        .tagline {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: var(--dark-navy);
+            font-weight: 800;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0, 214, 246, 0.4);
+            transition: transform 0.2s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: background 0.2s ease;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .features {
+            max-width: 1040px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 17, 56, 0.08);
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 17, 56, 0.12);
+        }
+        .icon {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+        }
+        .feature-card h3 {
+            font-size: 1.3rem;
+            color: var(--deep-navy);
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .section-pro {
+            background: linear-gradient(135deg, #001138 0%, #012e77 100%);
+            color: white;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            border-radius: 24px;
+            padding: 48px 36px;
+            box-shadow: 0 12px 40px rgba(0, 17, 56, 0.25);
+            text-align: center;
+        }
+        .section-pro h2 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+        .section-pro p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 650px;
+            margin: 0 auto 28px;
+            font-size: 1.05rem;
+        }
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .pricing-plan {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 24px 32px;
+            min-width: 220px;
+        }
+        .pricing-plan.featured {
+            background: linear-gradient(135deg, rgba(22, 109, 251, 0.4), rgba(0, 214, 246, 0.2));
+            border-color: var(--secondary);
+        }
+        .plan-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .plan-price { font-size: 2rem; font-weight: 800; color: #00d6f6; margin-bottom: 4px; }
+        .plan-duration { font-size: 0.85rem; color: rgba(255, 255, 255, 0.7); }
+
+        footer {
+            background: white;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+        }
+        .footer-nav {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-nav a {
+            color: var(--deep-navy);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-nav a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-container">
+            <img src="logo.png" alt="Bado App Logo" class="logo-img">
+            <br>
+            <span class="badge">iOS Garage Assistant</span>
+            <h1>Manage Your Vehicles with Ease.</h1>
+            <p class="tagline">Never miss a road tax, inspection, or insurance deadline again. Scan documents instantly, log maintenance, and consult your smart AI copilot.</p>
+            <div class="cta-buttons">
+                <a href="#features" class="btn-primary">Explore Features</a>
+                <a href="support.html" class="btn-secondary">Get Support</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <div class="icon">📅</div>
+            <h3>Smart Deadlines</h3>
+            <p>Automatic countdowns and proactive iOS push alerts (30, 15, and 1 day prior) for Bollo (Road Tax), Revisione, and Insurance.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📄</div>
+            <h3>Instant OCR Document Scanning</h3>
+            <p>Scan inspection receipts, insurance certificates, or registration cards via camera or PDF with on-device text recognition.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🤖</div>
+            <h3>AI Garage Copilot</h3>
+            <p>Ask anything about warning lights, tire specs, maintenance intervals, or deadline summaries in natural conversational language.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🔧</div>
+            <h3>Maintenance & Fuel Log</h3>
+            <p>Log oil changes, brake pads, tire rotations, and fuel fills. Keep a complete, timestamped digital service book for every car.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📍</div>
+            <h3>Nearby Workshops</h3>
+            <p>Locate nearby certified mechanics, tire shops, body repair centers, and official inspection centers with one-tap navigation.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">☁️</div>
+            <h3>Local-First & iCloud Sync</h3>
+            <p>Zero third-party database servers. Your vehicle information and uploaded documents remain safely stored on your device and private iCloud.</p>
+        </div>
+    </section>
+
+    <section class="section-pro">
+        <h2>Upgrade to Bado PRO</h2>
+        <p>Unlock unlimited vehicles, remove all ads, enable priority AI Copilot queries, and export full PDF service reports.</p>
+        <div class="pricing-cards">
+            <div class="pricing-plan">
+                <div class="plan-name">Monthly Plan</div>
+                <div class="plan-price">€2.99</div>
+                <div class="plan-duration">billed monthly &bull; cancel anytime</div>
+            </div>
+            <div class="pricing-plan featured">
+                <div class="plan-name">Annual Plan (Best Value)</div>
+                <div class="plan-price">€21.99</div>
+                <div class="plan-duration">billed annually &bull; save ~38%</div>
+            </div>
+        </div>
+        <p style="font-size: 0.85rem; opacity: 0.7;">Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period in Apple ID Account Settings.</p>
+    </section>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service & EULA</a>
+            <a href="support.html">Customer Support</a>
+        </div>
+        <p>&copy; 2026 Mirko Vitale. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 0.85rem;">Bado &bull; Developed by Mirko Vitale</p>
+    </footer>
+</body>
+</html>
